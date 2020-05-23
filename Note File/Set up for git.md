@@ -1,3 +1,14 @@
-# 1.Set your connection with your github account
+## 1.Set your connection with your github account
 ```bash
-ssh-keygen -t rsa -C "16jmxin@stu.edu.cn"
+ssh-keygen -t rsa -C "your@e-mail_account"
+```
+enter the passphrase if you need, then you'll get your key fingerprint
+## 2.Remotely verify your github account
+```bash
+ssh -v git@github.com
+```
+while you may still get the result below(it's OK, just continue):
+```bash
+debug1: No more authentication methods to try.
+git@github.com: Permission denied (publickey).
+```
