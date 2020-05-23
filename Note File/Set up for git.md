@@ -8,10 +8,8 @@ enter the passphrase if you need, then you'll get your key fingerprint
 $ ssh -v git@github.com
 ```
 while you may still get the result below(it's OK, just continue):  
-`
-debug1: No more authentication methods to try.  
-git@github.com: Permission denied (publickey).
-`
+`debug1: No more authentication methods to try.`  
+`git@github.com: Permission denied (publickey).`
 ## 3.Run the following command
 ```bash
 $ ssh-agent -s
