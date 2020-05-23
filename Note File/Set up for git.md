@@ -25,5 +25,13 @@ $ ssh-add ~/.ssh/id_rsa`
 ## 4.Now you can successfully run the command:
 ```bash
 $ ssh -T git@github.com
-/*you will get the result like "Hi XXX! You've successfully authenticated, but GitHub does not provide shell access."*/
-$ git init //creat the git file foder
+#you will get the result like "Hi XXX! You've successfully authenticated, but GitHub does not provide shell access."
+$ git init #creat the git file foder
+```
+## 5.Now it's time to pull your git
+```bash
+$ git remote add origin git@github.com:XXX.git #XXX is your respon
+$ git pull origin master
+$ git rm -r --cached Leetcode-Note/ #use this command to remove the file folder in your responsitory
+$ git commit -m 'remove Leetcode-Note/' #commit the change and add the operation description
+```
