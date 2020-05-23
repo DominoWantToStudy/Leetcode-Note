@@ -1,6 +1,6 @@
 ## 1.Set your connection with your github account
 ```bash
-> $ ssh-keygen -t rsa -C "your@e-mail_account"
+$ ssh-keygen -t rsa -C "your@e-mail_account"
 ```
 enter the passphrase if you need, then you'll get your key fingerprint
 ## 2.Remotely verify your github account
@@ -22,3 +22,8 @@ if you get `Could not open a connection to your authentication agent.`, run
 $ ssh-agent bash`
 $ ssh-add ~/.ssh/id_rsa`
 ```
+## 4.Now you can successfully run the command:
+```bash
+$ ssh -T git@github.com
+/*you will get the result like "Hi XXX! You've successfully authenticated, but GitHub does not provide shell access."*/
+$ git init //creat the git file foder
