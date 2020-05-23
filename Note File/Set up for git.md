@@ -9,7 +9,7 @@ $ ssh -v git@github.com
 ```
 while you may still get the result below(it's OK, just continue):  
 `
-debug1: No more authentication methods to try.
+debug1: No more authentication methods to try.  
 git@github.com: Permission denied (publickey).
 `
 ## 3.Run the following command
