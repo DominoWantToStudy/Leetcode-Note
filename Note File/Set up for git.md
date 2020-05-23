@@ -7,7 +7,7 @@ enter the passphrase if you need, then you'll get your key fingerprint
 ```bash
 $ ssh -v git@github.com
 ```
-while you may still get the result below(it's OK, just continue):
+while you may still get the result below(it's OK, just continue):  
 `
 debug1: No more authentication methods to try.
 git@github.com: Permission denied (publickey).
@@ -30,8 +30,8 @@ $ git init #creat the git file foder
 ```
 ## 5.Now it's time to pull your git
 ```bash
-$ git remote add origin git@github.com:XXX.git #XXX is your respon
+$ git remote add origin git@github.com:XXX.git #XXX is your repository
 $ git pull origin master
-$ git rm -r --cached Leetcode-Note/ #use this command to remove the file folder in your responsitory
+$ git rm -r --cached Leetcode-Note/ #use this command to remove the file folder in your repository
 $ git commit -m 'remove Leetcode-Note/' #commit the change and add the operation description
 ```
