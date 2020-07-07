@@ -1,0 +1,66 @@
+# 面试题 16.04. Tic-Tac-Toe
+```cpp
+class Solution {
+public:
+    bool hasWon(string line, string& winner, bool& is_space) {
+        int len = line.length();
+        const char first = line[0];
+        if (first == ' ') {
+            is_space = true;
+            return false;
+        }
+        for (int i = 1; i < len; i++) {
+            if (line[i] == ' ') {
+                is_space = true;
+                return false;
+            }
+            if (line[i] != first) {
+                return false;
+            }
+        }
+        winner = first == 'X' ? "X" : "O";
+        return true;
+    }
+
+    string tictactoe(vector<string>& board) {
+        int len = board.size();
+        bool is_space = false, is_space_in_line = false;
+        string res = "Draw";
+        for (int i = 0; i < len; i++) { 
+            if (hasWon(board[i], res, is_space_in_line)) {
+                return res;
+            }
+            is_space = is_space || is_space_in_line;
+
+            string line = "";
+            for (int j = 0; j < len; j++) {
+                line += board[j][i];
+            }
+            if (hasWon(line, res, is_space_in_line)) {
+                return res;
+            }
+            is_space = is_space || is_space_in_line;
+        }
+
+        string line = "";
+        for (int i = 0; i < len; i++) {
+            line += board[i][i];
+        }
+        if (hasWon(line, res, is_space_in_line)) {
+            return res;
+        }
+        is_space = is_space || is_space_in_line;
+
+        line = "";
+        for (int i = 0; i < len; i++) {
+            line += board[i][len - i - 1];
+        }
+        if (hasWon(line, res, is_space_in_line)) {
+            return res;
+        }
+        is_space = is_space || is_space_in_line;
+
+        return is_space ? "Pending" : "Draw";
+    }
+};
+```
